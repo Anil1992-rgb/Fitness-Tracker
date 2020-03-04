@@ -26,6 +26,7 @@ async function init() {
       location.search = "?id=" + workout._id;
     }
     else {
+      if(newWorkout) 
       newWorkout.classList.add("")
     }
   }

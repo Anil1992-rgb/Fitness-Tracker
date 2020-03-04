@@ -1,7 +1,7 @@
 async function init() {
   const lastWorkout = await API.getLastWorkout();
   console.log(lastWorkout);
-
+  
   document
     .querySelector("a[href='/exercise?']")
     .setAttribute("href", `/exercise?id=${lastWorkout._id}`);
@@ -12,7 +12,7 @@ async function init() {
     numExercises: lastWorkout.exercises.length,
     ...tallyExercises(lastWorkout.exercises)
   };
-
+ 
   renderWorkoutSummary(workoutSummary);
 }
 
